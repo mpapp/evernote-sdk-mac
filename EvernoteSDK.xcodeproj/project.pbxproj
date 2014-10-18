@@ -219,6 +219,11 @@
 		43741909170ADE8E00D2BE51 /* EvernoteSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2B9D6615449AEE00E5BD44 /* EvernoteSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4374190E170ADF7700D2BE51 /* EvernoteSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4374185E170ADA8100D2BE51 /* EvernoteSDK.strings */; };
 		4374190F170ADF7900D2BE51 /* EvernoteSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4374185E170ADA8100D2BE51 /* EvernoteSDK.strings */; };
+		5FF1143819F32A91003D4C7C /* KSHTMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B1E85D16C2242200D54760 /* KSHTMLWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF1143919F32AB1003D4C7C /* KSXMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B1E86316C2242200D54760 /* KSXMLWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF1143A19F32ABC003D4C7C /* KSForwardingWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B1E85B16C2242200D54760 /* KSForwardingWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF1143B19F32AE1003D4C7C /* KSWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B1E85F16C2242200D54760 /* KSWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FF1143C19F32AF7003D4C7C /* KSXMLAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B1E86116C2242200D54760 /* KSXMLAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A92602BC1672B4FE00F01E63 /* evernote_logo_4c-sm.png in Resources */ = {isa = PBXBuildFile; fileRef = A92602BB1672B4FE00F01E63 /* evernote_logo_4c-sm.png */; };
 		A92602BF1672B6DD00F01E63 /* NSData+EvernoteSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A92602BD1672B6DD00F01E63 /* NSData+EvernoteSDK.h */; };
 		A92602C01672B6DD00F01E63 /* NSData+EvernoteSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = A92602BE1672B6DD00F01E63 /* NSData+EvernoteSDK.m */; };
@@ -1134,9 +1139,11 @@
 				433000D4170C493700CFB953 /* ENAPI.h in Headers */,
 				433000D5170C493700CFB953 /* ENCredentials.h in Headers */,
 				433000D6170C493700CFB953 /* ENCredentialStore.h in Headers */,
+				5FF1143B19F32AE1003D4C7C /* KSWriter.h in Headers */,
 				433000D9170C495D00CFB953 /* NSDataBase64Additions.h in Headers */,
 				433000DA170C495D00CFB953 /* NSDate+EDAMAdditions.h in Headers */,
 				433000DB170C495D00CFB953 /* NSData+EvernoteSDK.h in Headers */,
+				5FF1143819F32A91003D4C7C /* KSHTMLWriter.h in Headers */,
 				433000DC170C495D00CFB953 /* ENMLUtility.h in Headers */,
 				433000DD170C495D00CFB953 /* EDAM.h in Headers */,
 				433000DE170C495D00CFB953 /* EDAMLimits.h in Headers */,
@@ -1144,8 +1151,10 @@
 				433000E0170C495D00CFB953 /* EDAMTypes.h in Headers */,
 				433000E1170C495D00CFB953 /* EDAMUserStore.h in Headers */,
 				433000E2170C495D00CFB953 /* EDAMErrors.h in Headers */,
+				5FF1143C19F32AF7003D4C7C /* KSXMLAttributes.h in Headers */,
 				433000D7170C493700CFB953 /* EvernoteSession.h in Headers */,
 				433000E3170C497C00CFB953 /* TObjective-C.h in Headers */,
+				5FF1143919F32AB1003D4C7C /* KSXMLWriter.h in Headers */,
 				433000E4170C497C00CFB953 /* TApplicationException.h in Headers */,
 				433000E5170C497C00CFB953 /* TException.h in Headers */,
 				433000E6170C497C00CFB953 /* Thrift.h in Headers */,
@@ -1161,6 +1170,7 @@
 				433000F0170C497C00CFB953 /* TTransport.h in Headers */,
 				433000F1170C497C00CFB953 /* TTransportException.h in Headers */,
 				433000D8170C493700CFB953 /* ENOAuthProtocol.h in Headers */,
+				5FF1143A19F32ABC003D4C7C /* KSForwardingWriter.h in Headers */,
 				4369155B170B0DBB00893324 /* ENOAuthWindowController.h in Headers */,
 				433000C9170C48F100CFB953 /* EvernoteUserStore+Extras.h in Headers */,
 				433000CA170C48F100CFB953 /* EvernoteUserStore.h in Headers */,
@@ -1222,7 +1232,7 @@
 			name = UnitTests;
 			productName = UnitTests;
 			productReference = 0BDBBC431550A11A003E6681 /* UnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		43741863170ADB2400D2BE51 /* EvernoteSDK-Mac */ = {
 			isa = PBXNativeTarget;
@@ -1888,7 +1898,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CODE_SIGN_ENTITLEMENTS = "SampleApp-Mac/SampleApp-Mac.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1915,7 +1925,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CODE_SIGN_ENTITLEMENTS = "SampleApp-Mac/SampleApp-Mac.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
