@@ -213,7 +213,7 @@
 		437418BC170ADCD700D2BE51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 437418BB170ADCD700D2BE51 /* AppDelegate.m */; };
 		437418BF170ADCD700D2BE51 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437418BD170ADCD700D2BE51 /* MainMenu.xib */; };
 		437418C3170ADCF600D2BE51 /* EvernoteSDK-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43741864170ADB2400D2BE51 /* EvernoteSDK-Mac.framework */; };
-		437418C7170ADD3F00D2BE51 /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43741864170ADB2400D2BE51 /* EvernoteSDK-Mac.framework */; };
+		437418C7170ADD3F00D2BE51 /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43741864170ADB2400D2BE51 /* EvernoteSDK-Mac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		43741906170ADE1100D2BE51 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43741905170ADE1000D2BE51 /* WebKit.framework */; };
 		43741908170ADE1700D2BE51 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43741907170ADE1700D2BE51 /* Security.framework */; };
 		43741909170ADE8E00D2BE51 /* EvernoteSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2B9D6615449AEE00E5BD44 /* EvernoteSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1277,8 +1277,8 @@
 		0BB3D1A41524ED96001C4534 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0640;
-				LastUpgradeCheck = 0640;
+				LastTestingUpgradeCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = n/a;
 			};
 			buildConfigurationList = 0BB3D1A71524ED96001C4534 /* Build configuration list for PBXProject "EvernoteSDK" */;
@@ -1655,6 +1655,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1771,6 +1772,7 @@
 				);
 				INFOPLIST_FILE = "SampleApp-iOS/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1787,6 +1789,7 @@
 				INFOPLIST_FILE = "SampleApp-iOS/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -1812,6 +1815,7 @@
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/UnitTests/3rdParty/OCMock/**";
 				WRAPPER_EXTENSION = octest;
@@ -1837,6 +1841,7 @@
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/UnitTests/3rdParty/OCMock/**";
 				WRAPPER_EXTENSION = octest;
@@ -1866,6 +1871,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1896,6 +1902,7 @@
 				LD_DYLIB_INSTALL_NAME = "@rpath/../Frameworks/$(EXECUTABLE_PATH)";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1923,6 +1930,7 @@
 				INFOPLIST_FILE = "SampleApp-Mac/SampleApp-Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -1949,6 +1957,7 @@
 				GCC_PREFIX_HEADER = "SampleApp-Mac/SampleApp-Mac-Prefix.pch";
 				INFOPLIST_FILE = "SampleApp-Mac/SampleApp-Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -2038,6 +2047,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2059,6 +2069,7 @@
 				);
 				INFOPLIST_FILE = "SampleApp-iOS/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -2085,6 +2096,7 @@
 				INFOPLIST_FILE = "SampleApp-Mac/SampleApp-Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -2110,6 +2122,7 @@
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/UnitTests/3rdParty/OCMock/**";
 				WRAPPER_EXTENSION = octest;
@@ -2199,6 +2212,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2220,6 +2234,7 @@
 				);
 				INFOPLIST_FILE = "SampleApp-iOS/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -2246,6 +2261,7 @@
 				INFOPLIST_FILE = "SampleApp-Mac/SampleApp-Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -2271,6 +2287,7 @@
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evernote.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/UnitTests/3rdParty/OCMock/**";
 				WRAPPER_EXTENSION = octest;
