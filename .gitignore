@@ -1,5 +1,6 @@
 xcuserdata
 *.xccheckout
+*.xcscmblueprint
 
 # OS X Finder
 .DS_Store
