@@ -54,7 +54,7 @@
 - (void)invokeAsyncInt32Block:(int32_t(^)(void))block
                       success:(void(^)(int32_t val))success
                       failure:(void(^)(NSError *error))failure;
-- (void)invokeAsyncVoidBlock:(void(^)())block
+- (void)invokeAsyncVoidBlock:(void(^)(void))block
                      success:(void(^)(void))success
                      failure:(void(^)(NSError *error))failure;
 

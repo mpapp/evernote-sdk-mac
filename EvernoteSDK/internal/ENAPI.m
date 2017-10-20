@@ -191,7 +191,7 @@ typedef void (^EvernoteErrorBlock) (NSError *error);
     });
 }
 
-- (void)invokeAsyncVoidBlock:(void(^)())block
+- (void)invokeAsyncVoidBlock:(void(^)(void))block
                      success:(void(^)(void))success
                      failure:(void(^)(NSError *error))failure
 {
